@@ -6,7 +6,7 @@
 	</section>
 	<aside id="categories" ng-controller="CategoriesController">
 		<ul>
-			<li ng-repeat="category in categories" ng-click="setActive($index)" ng-class="{ active: activeCategory == $index }">{{ category }}</li>
+			<li ng-repeat="category in categories" ng-click="setActiveCategory($index)" ng-dblclick="editCategoryName($index)" ng-class="{ active: activeCategory == $index }">{{ category }}</li>
 		</ul>
 		<button ng-click="newCategory()">New</button>
 	</aside>
