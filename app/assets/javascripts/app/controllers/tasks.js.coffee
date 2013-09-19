@@ -7,6 +7,6 @@
 	
 	$scope.newTask = ->
 		taskLabel = prompt "New task"
-		$rootScope.tasks.push { label: taskLabel, category: $scope.activeCategory, isCompleted: false
+		$rootScope.tasks.push { label: taskLabel, category: $scope.activeCategory, isCompleted: false }
 		
 ]
