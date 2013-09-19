@@ -1,2 +1,12 @@
-<h1>Pages#app</h1>
-<p>Find me in app/views/pages/app.html.erb</p>
+<div id="app" ng-controller="MainController">
+	<section id="tasks" ng-controller="TasksController">
+		<ul>
+			<li></li>
+		</ul>
+	</section>
+	<aside id="categories" ng-controller="CategoriesController">
+		<ul>
+			<li ng-repeat="category in categories">{{ category }}</li>
+		</ul>
+	</aside>
+</div>
