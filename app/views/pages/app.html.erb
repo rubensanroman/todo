@@ -1,8 +1,9 @@
-<div id="app" ng-controller="MainController">
+<div id="app">
 	<section id="tasks" ng-controller="TasksController">
 		<ul>
-			<li></li>
+			<li ng-repeat="task in tasks" ng-class="{ completed: task.isCompleted }" ng-show="activeCategory == task.category"><input type="checkbox" ng-model="task.isCompleted">&nbsp;&nbsp;{{ task.label }}</li>
 		</ul>
+		<button ng-click="newTask()">New</button>
 	</section>
 	<aside id="categories" ng-controller="CategoriesController">
 		<ul>

@@ -1,0 +1,28 @@
+#tasks {
+	color: #555;
+	bottom: 0;
+	left: 250px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	
+	ul {
+		list-style-type: none;
+		padding: 0;
+		
+		li {
+			border-bottom: 1px #ddd solid;
+			padding: 10px 15px;
+					
+			&.completed {
+				text-decoration: line-through;
+			}
+		}
+	}
+	
+	button {
+		display: block;
+		margin: 25px auto;
+		width: 100px;
+	}
+}
