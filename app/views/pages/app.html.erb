@@ -1,13 +1,13 @@
-<div id="app">
+<div id="app" ng-controller="MainController">
 	<section id="tasks" ng-controller="TasksController">
 		<ul>
-			<li ng-repeat="task in tasks" ng-class="{ completed: task.isCompleted }" ng-show="activeCategory == task.category"><input type="checkbox" ng-model="task.isCompleted">&nbsp;&nbsp;{{ task.label }}</li>
+			<li ng-repeat="(k, v) in tasks" ng-show="activeCategory == v.category_id">{{ v.name }}</li>
 		</ul>
 		<button ng-click="newTask()">New</button>
 	</section>
 	<aside id="categories" ng-controller="CategoriesController">
 		<ul>
-			<li ng-repeat="category in categories" ng-click="setActiveCategory($index)" ng-dblclick="editCategoryName($index)" ng-class="{ active: activeCategory == $index }">{{ category }}</li>
+			<li ng-repeat="category in categories" ng-click="setActiveCategory($index)" ng-dblclick="editCategoryName($index)" ng-class="{ active: activeCategory == $index }">{{ category }} <span>(0)</span></li>
 		</ul>
 		<button ng-click="newCategory()">New</button>
 	</aside>

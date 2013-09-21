@@ -10,5 +10,6 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require underscore-1.5.2
 //= require angular-1.0.8
 //= require_tree ./app
