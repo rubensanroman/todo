@@ -1,6 +1,6 @@
-@app.controller "TasksController", ["$rootScope", "$scope", ($rootScope, $scope) ->
+@app.controller "TasksController", ["$scope", ($scope) ->
 
-	$scope.newTask = ->
+	$scope.new = ->
 		id = _.keys($scope.tasks).length
 		
 		$scope.tasks[id] = {
